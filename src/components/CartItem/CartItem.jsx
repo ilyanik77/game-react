@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useDispatch } from 'react-redux'
-import { deleteItemFromCart } from '../../redux/cart/reducer'
+import { deleteItemFromCart } from '../../redux/cart/cartSlice'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 import styles from './cartItem.module.css'

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import { setItemInCart, deleteItemFromCart } from '../../redux/cart/reducer'
+import { setItemInCart, deleteItemFromCart } from '../../redux/cart/cartSlice'
 
 import styles from './gameBuy.module.css'
 import Button from '../Button/Button'
@@ -24,16 +24,13 @@ const GameBuy = ({ game }) => {
 	return (
 		<div className={styles.gameBuy}>
 			<span className={styles.gameBuy__price}>{game.price} руб.</span>
-			{/* <Button
-				// type={isItemInCart ? 'secondary' : 'primary'}
-				// onClick={handleClick}
+			<Button
+				
+				onClick={handleClick}
 			>
 				{isItemInCart ? 'Убрать из корзины' : 'В Корзину'}
-			</Button> */}
-			{/* <Button onClick={() => {}}>
-                
-            <Button/> */}
-			<Button onClick={handleClick}>В корзину</Button>
+			</Button>
+			
 		</div>
 	)
 }

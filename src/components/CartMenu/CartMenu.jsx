@@ -9,8 +9,9 @@ import { calcTotalPrice } from '../utils.js'
 
 import styles from './cartMenu.module.css'
 
-const CartMenu = ({ onClick }) => {
+const CartMenu = ({handleGoToOrderClick}) => {
 	const items = useSelector(state => state.cart.itemsInCart)
+
 	return (
 		<div className={styles.cartMenu}>
 			<div className={styles.cartMenu__gamesList}>
@@ -32,7 +33,7 @@ const CartMenu = ({ onClick }) => {
 						<span>Итого:</span>
 						<span>{calcTotalPrice(items)} руб.</span>
 					</div>
-					<Button onClick={onClick}>Оформить заказ</Button>
+					<Button onClick={handleGoToOrderClick()}>Оформить заказ</Button>
 				</div>
 			) : null}
 		</div>

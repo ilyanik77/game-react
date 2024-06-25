@@ -6,6 +6,8 @@
     background-color: rgb(36, 37, 41);
     cursor: pointer;
     position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .gameItem__title {
@@ -31,7 +33,7 @@
 .gameItem__buy {
     position: absolute;
     text-align: right;
-    width: 70%;
+    width: 80%;
     right: 0;
     bottom: -12px;
 }

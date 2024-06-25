@@ -12,10 +12,12 @@ const CartBlock = () => {
 	const items = useSelector(state => state.cart.itemsInCart)
 	const navigate = useNavigate()
 	const totalPrice = items.reduce((acc, game) => (acc += game.price), 0)
-    const handleGoToOrderClick = useCallback(() => {
-			setIsCartMenuVisible(false)
-			navigate('/order')
-		}, [navigate])
+	const handleGoToOrderClick = useCallback(() => {
+		setIsCartMenuVisible(false)
+		navigate('/order')
+		console.log('ok')
+	}, [navigate])
+	
 
 	return (
 		<div className={styles.cartBlock}>
@@ -28,7 +30,9 @@ const CartBlock = () => {
 			{totalPrice > 0 ? (
 				<span className='totalPrice'>{totalPrice} руб.</span>
 			) : null}
-			{isCartMenuVisible && <CartMenu onClick={handleGoToOrderClick} />}
+			{isCartMenuVisible && (
+				<CartMenu handleGoToOrderClick={handleGoToOrderClick} />
+			)}
 		</div>
 	)
 }

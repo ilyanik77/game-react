@@ -1,0 +1,16 @@
+.orderPage {
+    
+}
+
+.orderPage__content {
+    
+}
+
+
+
+.orderPage__totalPrice {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}

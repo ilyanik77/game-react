@@ -1,0 +1,16 @@
+.gamePage__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.gamePage__left {
+    grid-column: 1 / span 2;
+}
+
+.gamePage__buyGame {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
