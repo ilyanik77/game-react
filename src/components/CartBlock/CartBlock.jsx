@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { BiCartAlt } from 'react-icons/bi'
 
@@ -10,14 +10,14 @@ import ItemInCart from '../ItemInCart/ItemInCart'
 const CartBlock = () => {
 	const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
 	const items = useSelector(state => state.cart.itemsInCart)
-	const navigate = useNavigate()
+    const navigate = useNavigate()
 	const totalPrice = items.reduce((acc, game) => (acc += game.price), 0)
+
 	const handleGoToOrderClick = useCallback(() => {
-		setIsCartMenuVisible(false)
 		navigate('/order')
+		setIsCartMenuVisible(false)
 		console.log('ok')
 	}, [navigate])
-	
 
 	return (
 		<div className={styles.cartBlock}>

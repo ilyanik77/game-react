@@ -13,9 +13,7 @@ const Header = () => {
 				</Link>
 			</div>
 			<div className={styles.wrapper + styles.header__cartBtnWrapper}>
-				<Link>
-					<CartBlock />
-				</Link>
+				<CartBlock />
 			</div>
 		</div>
 	)
